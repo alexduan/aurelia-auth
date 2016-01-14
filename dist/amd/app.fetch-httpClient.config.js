@@ -28,10 +28,11 @@ define(['exports', 'aurelia-fetch-client', './authentication', './baseConfig', '
 
         this.httpClient.configure(function (httpConfig) {
           httpConfig.withDefaults({
+            mode: config.mode,
             headers: {
               'Accept': 'application/json'
             }
-          }).withInterceptor({
+          }).withBaseUrl(config.baseUrl).withInterceptor({
             request: function request(_request) {
               if (auth.isAuthenticated() && config.httpInterceptor) {
                 var tokenName = config.tokenPrefix ? config.tokenPrefix + '_' + config.tokenName : config.tokenName;

@@ -30,6 +30,7 @@ define(['exports', './authUtils'], function (exports, _authUtils) {
       _classCallCheck(this, BaseConfig);
 
       this._current = {
+        mode: 'no-cors',
         httpInterceptor: true,
         loginOnSignup: true,
         baseUrl: '/',

@@ -31,6 +31,7 @@ var BaseConfig = (function () {
     _classCallCheck(this, BaseConfig);
 
     this._current = {
+      mode: 'no-cors',
       httpInterceptor: true,
       loginOnSignup: true,
       baseUrl: '/',

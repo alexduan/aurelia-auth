@@ -29,6 +29,7 @@ System.register(['./authUtils'], function (_export) {
           _classCallCheck(this, BaseConfig);
 
           this._current = {
+            mode: 'no-cors',
             httpInterceptor: true,
             loginOnSignup: true,
             baseUrl: '/',

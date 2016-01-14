@@ -11,6 +11,7 @@ export class BaseConfig {
 
   constructor() {
     this._current = {
+      mode: 'no-cors',
       httpInterceptor: true,
       loginOnSignup: true,
       baseUrl: '/',
