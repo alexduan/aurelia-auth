@@ -21,10 +21,12 @@ export class FetchConfig {
     this.httpClient.configure(httpConfig => {
       httpConfig
         .withDefaults({
+          mode: config.mode,
           headers: {
             'Accept': 'application/json'
           }
         })
+        .withBaseUrl(config.baseUrl)
         .withInterceptor({
           request(request) {
             if (auth.isAuthenticated() && config.httpInterceptor) {
